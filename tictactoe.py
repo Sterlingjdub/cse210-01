@@ -11,7 +11,11 @@ def main():
         make_move(player, board)
         player = next_player(player)
     display_board(board)
-    print("Good game. Thanks for playing!") 
+    if has_winner(board) == True:
+        print("You won!")
+    elif is_a_draw(board):
+        print("Tie game")
+    print("Thanks for playing!") 
 
 def create_board():
     board = []
